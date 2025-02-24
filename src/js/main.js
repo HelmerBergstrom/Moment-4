@@ -9,3 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburgare.classList.toggle("open");
     })
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const box = document.querySelector(".div-animation");
+
+    box.addEventListener("mouseover", function() {
+        box.classList.add("stay");
+    })
+})

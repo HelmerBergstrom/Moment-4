@@ -1,2 +1,93 @@
 /* Animeringar för moment 4. */
 
+@keyframes background {
+    0% {
+        background-color: black;
+        color: white;
+    }
+    25% {
+        background-color: white;
+        color: red;
+    }
+    50% {
+        background-color: #848484;
+        color: #848484;
+    }
+    75% {
+        background-color: black;
+        color: blue;
+    }
+    100% {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+.h1-animation {
+    animation-name: background;
+    animation-duration: 3s;
+    border: solid 10px;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.div-animation {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 100vh;
+    background-color: #848484;
+    transition-property: all;
+    transition-duration: 3s;
+p {
+    text-align: center; 
+    color: white;
+    font-size: 30px;
+}
+}
+.div-animation:hover,
+.div-animation.stay {
+    width: 0px;
+    height: 0px;
+p {
+    display: none;
+}
+}
+
+.football-players {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(500px, 0px);
+    }
+    100% {
+        transform: translate(650px, 220px);
+    }
+}
+.football-playerAni {
+    color: #848484;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 50px;
+}
+.football-animation {
+    animation: move 1s infinite alternate;
+    @extend .football-playerAni;
+}
+.football-playerAni2 {
+    @extend .football-playerAni;
+    transform: rotateY(180deg);
+    margin-left: 500px;
+}
+.football-playerAni3 {
+    font-size: 100px;
+    color: #848484;
+    transform: rotateY(180deg);
+    text-align: center;
+    margin-top: 100px;
+}
