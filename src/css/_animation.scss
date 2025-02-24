@@ -1,4 +1,37 @@
 /* Animeringar för moment 4. */
+.animation-menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(119, 119, 119);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    z-index: 1000;
+    transition: all 1s ease;
+    li {
+        list-style: none;
+        padding: 10px;
+        color: white;
+    }
+    li:hover {
+        background-color: rgb(55, 55, 55);
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.scrolled a {
+    color: white;
+}
 
 @keyframes background {
     0% {
@@ -27,11 +60,12 @@
     animation-duration: 3s;
     border: solid 10px;
     border-radius: 100px;
-    margin-top: 10px;
+    margin-top: 150px;
 }
 
 .div-animation {
     position: absolute;
+    z-index: 1000;
     top: 250px;
     width: 100%;
     height: 100vh;
@@ -89,5 +123,70 @@ p {
     color: #848484;
     transform: rotateY(180deg);
     text-align: center;
-    margin-top: 100px;
+    margin-top: 250px;
+    margin-left: 75px;
+}
+.h2-animation {
+    margin-top: 50px;
+    border: solid 10px;
+    border-radius: 100px;
+}
+.button-div {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes crazy {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    20%  { transform: translate(200px, -150px) rotate(90deg); }
+    40%  { transform: translate(-250px, 100px) rotate(180deg); }
+    60%  { transform: translate(300px, 200px) rotate(270deg); }
+    80%  { transform: translate(-150px, -200px) rotate(360deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.button-animation {
+    position: absolute;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    animation: crazy 3s infinite linear;
+}
+
+.button-animation:hover {
+    animation: none;
+} 
+
+@media (max-width: 1000px) {
+    .scrolled, .animation-menu {
+        display: none;
+    }
+    .football-playerAni2, .football-playerAni3 {
+        display: none;
+    }
+    @keyframes move {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            transform: translate(200px, 0px);
+        }
+    }
+    @keyframes crazy {
+        0%   { transform: translate(0, 0) rotate(0deg); }
+        20%  { transform: translate(200px, -150px) rotate(90deg); }
+        40%  { transform: translate(-250px, 100px) rotate(180deg); }
+        60%  { transform: translate(200px, 100px) rotate(270deg); }
+        80%  { transform: translate(-150px, -200px) rotate(360deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
 }

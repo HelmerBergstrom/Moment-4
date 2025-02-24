@@ -17,3 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
         box.classList.add("stay");
     })
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const animationMenu = document.querySelector(".animation-menu");
+
+    window.addEventListener("scroll", function () {
+        if(window.scrollY > 50) {
+            animationMenu.classList.add("scrolled");
+        } else {
+            animationMenu.classList.remove("scrolled");
+        }
+    })
+})
