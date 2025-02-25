@@ -57,7 +57,7 @@
 }
 .h1-animation {
     animation-name: background;
-    animation-duration: 3s;
+    animation-duration: 5s;
     border: solid 10px;
     border-radius: 100px;
     margin-top: 150px;
@@ -69,7 +69,7 @@
     top: 250px;
     width: 100%;
     height: 100vh;
-    background-color: #848484;
+    background-color: #000000;
     transition-property: all;
     transition-duration: 3s;
 p {
@@ -130,6 +130,8 @@ p {
     margin-top: 50px;
     border: solid 10px;
     border-radius: 100px;
+    animation-name: background;
+    animation-duration: 20s;
 }
 .button-div {
     position: relative;
@@ -153,16 +155,17 @@ p {
     position: absolute;
     padding: 15px 30px;
     font-size: 18px;
-    background-color: green;
+    background-color: red;
     color: white;
     border: none;
     border-radius: 10px;
-    transition: 0.3s ease-in-out;
+    transition: 0.7s ease-in-out;
     animation: crazy 3s infinite linear;
 }
 
 .button-animation:hover {
     animation: none;
+    background-color: green;
 } 
 
 @media (max-width: 1000px) {
